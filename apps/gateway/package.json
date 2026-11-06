@@ -1,0 +1,19 @@
+{
+  "name": "@flightops/gateway",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Hive Gateway: composes the federated supergraph and serves queries and subscriptions.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@flightops/config": "workspace:*",
+    "@flightops/logger": "workspace:*",
+    "@flightops/service-kit": "workspace:*"
+  }
+}

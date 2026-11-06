@@ -1,0 +1,25 @@
+{
+  "name": "@flightops/logger",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Structured JSON logging (pino) with secret redaction.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@flightops/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "pino": "^9.9.0"
+  }
+}
