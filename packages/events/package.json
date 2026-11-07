@@ -1,0 +1,26 @@
+{
+  "name": "@flightops/events",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Versioned domain event contracts (zod schemas + types) and Redis channel names.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@flightops/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@flightops/domain": "workspace:*",
+    "zod": "^4.1.5"
+  }
+}

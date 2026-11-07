@@ -18,7 +18,18 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "infra:up": "docker compose -f infra/docker-compose/compose.yaml up -d --wait",
+    "infra:down": "docker compose -f infra/docker-compose/compose.yaml down",
+    "infra:reset": "docker compose -f infra/docker-compose/compose.yaml down -v",
+    "infra:logs": "docker compose -f infra/docker-compose/compose.yaml logs -f",
+    "db:migrate": "pnpm --filter @flightops/db migrate",
+    "db:status": "pnpm --filter @flightops/db status",
+    "db:reset": "pnpm --filter @flightops/db reset",
+    "db:seed": "pnpm --filter @flightops/seed seed",
+    "db:reseed": "pnpm --filter @flightops/seed seed -- --reset",
+    "setup": "pnpm infra:up && pnpm db:migrate && pnpm db:seed",
+    "events:tail": "docker compose -f infra/docker-compose/compose.yaml exec redis redis-cli SUBSCRIBE flight.events"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

@@ -1,0 +1,422 @@
+[
+  {
+    "iata": "CAI",
+    "icao": "HECA",
+    "name": "Cairo International Airport",
+    "city": "Cairo",
+    "countryCode": "EG",
+    "timezone": "Africa/Cairo",
+    "latitude": 30.1219,
+    "longitude": 31.4056
+  },
+  {
+    "iata": "HBE",
+    "icao": "HEBA",
+    "name": "Borg El Arab International Airport",
+    "city": "Alexandria",
+    "countryCode": "EG",
+    "timezone": "Africa/Cairo",
+    "latitude": 30.9177,
+    "longitude": 29.6964
+  },
+  {
+    "iata": "HRG",
+    "icao": "HEGN",
+    "name": "Hurghada International Airport",
+    "city": "Hurghada",
+    "countryCode": "EG",
+    "timezone": "Africa/Cairo",
+    "latitude": 27.1783,
+    "longitude": 33.7994
+  },
+  {
+    "iata": "SSH",
+    "icao": "HESH",
+    "name": "Sharm El Sheikh International Airport",
+    "city": "Sharm El Sheikh",
+    "countryCode": "EG",
+    "timezone": "Africa/Cairo",
+    "latitude": 27.9773,
+    "longitude": 34.395
+  },
+  {
+    "iata": "LXR",
+    "icao": "HELX",
+    "name": "Luxor International Airport",
+    "city": "Luxor",
+    "countryCode": "EG",
+    "timezone": "Africa/Cairo",
+    "latitude": 25.671,
+    "longitude": 32.7066
+  },
+  {
+    "iata": "ASW",
+    "icao": "HESN",
+    "name": "Aswan International Airport",
+    "city": "Aswan",
+    "countryCode": "EG",
+    "timezone": "Africa/Cairo",
+    "latitude": 23.9644,
+    "longitude": 32.82
+  },
+  {
+    "iata": "JED",
+    "icao": "OEJN",
+    "name": "King Abdulaziz International Airport",
+    "city": "Jeddah",
+    "countryCode": "SA",
+    "timezone": "Asia/Riyadh",
+    "latitude": 21.6796,
+    "longitude": 39.1565
+  },
+  {
+    "iata": "RUH",
+    "icao": "OERK",
+    "name": "King Khalid International Airport",
+    "city": "Riyadh",
+    "countryCode": "SA",
+    "timezone": "Asia/Riyadh",
+    "latitude": 24.9576,
+    "longitude": 46.6988
+  },
+  {
+    "iata": "MED",
+    "icao": "OEMA",
+    "name": "Prince Mohammad bin Abdulaziz International Airport",
+    "city": "Medina",
+    "countryCode": "SA",
+    "timezone": "Asia/Riyadh",
+    "latitude": 24.5534,
+    "longitude": 39.7051
+  },
+  {
+    "iata": "DXB",
+    "icao": "OMDB",
+    "name": "Dubai International Airport",
+    "city": "Dubai",
+    "countryCode": "AE",
+    "timezone": "Asia/Dubai",
+    "latitude": 25.2532,
+    "longitude": 55.3657
+  },
+  {
+    "iata": "AUH",
+    "icao": "OMAA",
+    "name": "Zayed International Airport",
+    "city": "Abu Dhabi",
+    "countryCode": "AE",
+    "timezone": "Asia/Dubai",
+    "latitude": 24.433,
+    "longitude": 54.6511
+  },
+  {
+    "iata": "DOH",
+    "icao": "OTHH",
+    "name": "Hamad International Airport",
+    "city": "Doha",
+    "countryCode": "QA",
+    "timezone": "Asia/Qatar",
+    "latitude": 25.2731,
+    "longitude": 51.6081
+  },
+  {
+    "iata": "KWI",
+    "icao": "OKKK",
+    "name": "Kuwait International Airport",
+    "city": "Kuwait City",
+    "countryCode": "KW",
+    "timezone": "Asia/Kuwait",
+    "latitude": 29.2266,
+    "longitude": 47.9689
+  },
+  {
+    "iata": "AMM",
+    "icao": "OJAI",
+    "name": "Queen Alia International Airport",
+    "city": "Amman",
+    "countryCode": "JO",
+    "timezone": "Asia/Amman",
+    "latitude": 31.7226,
+    "longitude": 35.9932
+  },
+  {
+    "iata": "BEY",
+    "icao": "OLBA",
+    "name": "Beirut-Rafic Hariri International Airport",
+    "city": "Beirut",
+    "countryCode": "LB",
+    "timezone": "Asia/Beirut",
+    "latitude": 33.8209,
+    "longitude": 35.4884
+  },
+  {
+    "iata": "IST",
+    "icao": "LTFM",
+    "name": "Istanbul Airport",
+    "city": "Istanbul",
+    "countryCode": "TR",
+    "timezone": "Europe/Istanbul",
+    "latitude": 41.2753,
+    "longitude": 28.7519
+  },
+  {
+    "iata": "ATH",
+    "icao": "LGAV",
+    "name": "Athens International Airport",
+    "city": "Athens",
+    "countryCode": "GR",
+    "timezone": "Europe/Athens",
+    "latitude": 37.9364,
+    "longitude": 23.9445
+  },
+  {
+    "iata": "FCO",
+    "icao": "LIRF",
+    "name": "Rome Fiumicino Airport",
+    "city": "Rome",
+    "countryCode": "IT",
+    "timezone": "Europe/Rome",
+    "latitude": 41.8003,
+    "longitude": 12.2389
+  },
+  {
+    "iata": "CDG",
+    "icao": "LFPG",
+    "name": "Paris Charles de Gaulle Airport",
+    "city": "Paris",
+    "countryCode": "FR",
+    "timezone": "Europe/Paris",
+    "latitude": 49.0097,
+    "longitude": 2.5479
+  },
+  {
+    "iata": "FRA",
+    "icao": "EDDF",
+    "name": "Frankfurt Airport",
+    "city": "Frankfurt",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "latitude": 50.0379,
+    "longitude": 8.5622
+  },
+  {
+    "iata": "MUC",
+    "icao": "EDDM",
+    "name": "Munich Airport",
+    "city": "Munich",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "latitude": 48.3538,
+    "longitude": 11.7861
+  },
+  {
+    "iata": "LHR",
+    "icao": "EGLL",
+    "name": "London Heathrow Airport",
+    "city": "London",
+    "countryCode": "GB",
+    "timezone": "Europe/London",
+    "latitude": 51.47,
+    "longitude": -0.4543
+  },
+  {
+    "iata": "AMS",
+    "icao": "EHAM",
+    "name": "Amsterdam Airport Schiphol",
+    "city": "Amsterdam",
+    "countryCode": "NL",
+    "timezone": "Europe/Amsterdam",
+    "latitude": 52.3105,
+    "longitude": 4.7683
+  },
+  {
+    "iata": "MAD",
+    "icao": "LEMD",
+    "name": "Adolfo Suarez Madrid-Barajas Airport",
+    "city": "Madrid",
+    "countryCode": "ES",
+    "timezone": "Europe/Madrid",
+    "latitude": 40.4983,
+    "longitude": -3.5676
+  },
+  {
+    "iata": "BRU",
+    "icao": "EBBR",
+    "name": "Brussels Airport",
+    "city": "Brussels",
+    "countryCode": "BE",
+    "timezone": "Europe/Brussels",
+    "latitude": 50.9014,
+    "longitude": 4.4844
+  },
+  {
+    "iata": "VIE",
+    "icao": "LOWW",
+    "name": "Vienna International Airport",
+    "city": "Vienna",
+    "countryCode": "AT",
+    "timezone": "Europe/Vienna",
+    "latitude": 48.1103,
+    "longitude": 16.5697
+  },
+  {
+    "iata": "GVA",
+    "icao": "LSGG",
+    "name": "Geneva Airport",
+    "city": "Geneva",
+    "countryCode": "CH",
+    "timezone": "Europe/Zurich",
+    "latitude": 46.2381,
+    "longitude": 6.109
+  },
+  {
+    "iata": "JFK",
+    "icao": "KJFK",
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "countryCode": "US",
+    "timezone": "America/New_York",
+    "latitude": 40.6413,
+    "longitude": -73.7781
+  },
+  {
+    "iata": "IAD",
+    "icao": "KIAD",
+    "name": "Washington Dulles International Airport",
+    "city": "Washington",
+    "countryCode": "US",
+    "timezone": "America/New_York",
+    "latitude": 38.9531,
+    "longitude": -77.4565
+  },
+  {
+    "iata": "YYZ",
+    "icao": "CYYZ",
+    "name": "Toronto Pearson International Airport",
+    "city": "Toronto",
+    "countryCode": "CA",
+    "timezone": "America/Toronto",
+    "latitude": 43.6777,
+    "longitude": -79.6248
+  },
+  {
+    "iata": "ADD",
+    "icao": "HAAB",
+    "name": "Addis Ababa Bole International Airport",
+    "city": "Addis Ababa",
+    "countryCode": "ET",
+    "timezone": "Africa/Addis_Ababa",
+    "latitude": 8.9779,
+    "longitude": 38.7993
+  },
+  {
+    "iata": "NBO",
+    "icao": "HKJK",
+    "name": "Jomo Kenyatta International Airport",
+    "city": "Nairobi",
+    "countryCode": "KE",
+    "timezone": "Africa/Nairobi",
+    "latitude": -1.3192,
+    "longitude": 36.9278
+  },
+  {
+    "iata": "JNB",
+    "icao": "FAOR",
+    "name": "O. R. Tambo International Airport",
+    "city": "Johannesburg",
+    "countryCode": "ZA",
+    "timezone": "Africa/Johannesburg",
+    "latitude": -26.1392,
+    "longitude": 28.246
+  },
+  {
+    "iata": "LOS",
+    "icao": "DNMM",
+    "name": "Murtala Muhammed International Airport",
+    "city": "Lagos",
+    "countryCode": "NG",
+    "timezone": "Africa/Lagos",
+    "latitude": 6.5774,
+    "longitude": 3.3212
+  },
+  {
+    "iata": "CMN",
+    "icao": "GMMN",
+    "name": "Mohammed V International Airport",
+    "city": "Casablanca",
+    "countryCode": "MA",
+    "timezone": "Africa/Casablanca",
+    "latitude": 33.3675,
+    "longitude": -7.5898
+  },
+  {
+    "iata": "TUN",
+    "icao": "DTTA",
+    "name": "Tunis-Carthage International Airport",
+    "city": "Tunis",
+    "countryCode": "TN",
+    "timezone": "Africa/Tunis",
+    "latitude": 36.851,
+    "longitude": 10.2272
+  },
+  {
+    "iata": "BOM",
+    "icao": "VABB",
+    "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "city": "Mumbai",
+    "countryCode": "IN",
+    "timezone": "Asia/Kolkata",
+    "latitude": 19.0896,
+    "longitude": 72.8656
+  },
+  {
+    "iata": "DEL",
+    "icao": "VIDP",
+    "name": "Indira Gandhi International Airport",
+    "city": "New Delhi",
+    "countryCode": "IN",
+    "timezone": "Asia/Kolkata",
+    "latitude": 28.5562,
+    "longitude": 77.1
+  },
+  {
+    "iata": "BKK",
+    "icao": "VTBS",
+    "name": "Suvarnabhumi Airport",
+    "city": "Bangkok",
+    "countryCode": "TH",
+    "timezone": "Asia/Bangkok",
+    "latitude": 13.69,
+    "longitude": 100.7501
+  },
+  {
+    "iata": "KUL",
+    "icao": "WMKK",
+    "name": "Kuala Lumpur International Airport",
+    "city": "Kuala Lumpur",
+    "countryCode": "MY",
+    "timezone": "Asia/Kuala_Lumpur",
+    "latitude": 2.7456,
+    "longitude": 101.7099
+  },
+  {
+    "iata": "CAN",
+    "icao": "ZGGG",
+    "name": "Guangzhou Baiyun International Airport",
+    "city": "Guangzhou",
+    "countryCode": "CN",
+    "timezone": "Asia/Shanghai",
+    "latitude": 23.3924,
+    "longitude": 113.2988
+  },
+  {
+    "iata": "NRT",
+    "icao": "RJAA",
+    "name": "Narita International Airport",
+    "city": "Tokyo",
+    "countryCode": "JP",
+    "timezone": "Asia/Tokyo",
+    "latitude": 35.772,
+    "longitude": 140.3929
+  }
+]

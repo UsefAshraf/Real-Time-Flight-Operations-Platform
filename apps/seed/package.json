@@ -1,0 +1,23 @@
+{
+  "name": "@flightops/seed",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Deterministic seed data: airports, gates, fleet, a hub-and-spoke schedule, passengers and bookings.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "seed": "tsx --conditions=@flightops/source src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests --testTimeout=120000 --hookTimeout=180000"
+  },
+  "dependencies": {
+    "@flightops/config": "workspace:*",
+    "@flightops/db": "workspace:*",
+    "@flightops/domain": "workspace:*",
+    "@flightops/flights-core": "workspace:*",
+    "@flightops/logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@flightops/testing": "workspace:*"
+  }
+}

@@ -82,7 +82,7 @@ Rules:
 
 ## Domain events
 
-Published through the transactional outbox (Phase 1). Every event shares one envelope:
+Published through the transactional outbox ([ADR 0006](adr/0006-transactional-outbox.md)) to the Redis channel `flight.events` and the replay stream `flight.events.stream`. Contracts are zod schemas in [`packages/events`](../packages/events/src/index.ts). Every event shares one envelope, and every payload carries `flightNumber`, `originIata` and `destinationIata`, so consumers can route an event without looking the flight up:
 
 ```json
 {
@@ -90,19 +90,27 @@ Published through the transactional outbox (Phase 1). Every event shares one env
   "type": "FlightGateChanged",
   "version": 1,
   "flightId": "uuid",
-  "occurredAt": "2026-11-06T18:30:00Z",
-  "payload": { "oldGate": "A12", "newGate": "B04" }
+  "occurredAt": "2026-11-06T18:30:00.000Z",
+  "payload": {
+    "flightNumber": "FO101",
+    "originIata": "CAI",
+    "destinationIata": "LHR",
+    "oldGate": "A12",
+    "newGate": "B04"
+  }
 }
 ```
 
-| Event                 | Emitted when                 | Typical consumers                           |
-| --------------------- | ---------------------------- | ------------------------------------------- |
-| `FlightStatusChanged` | any state-machine transition | gateway subscriptions, cache, notifications |
-| `FlightDelayed`       | new or revised delay         | notifications, airport board                |
-| `FlightGateChanged`   | gate assigned or changed     | notifications, airport board                |
-| `FlightCancelled`     | transition to `CANCELLED`    | notifications (high priority)               |
-| `FlightDiverted`      | transition to `DIVERTED`     | notifications, ops dashboard                |
-| `BookingCreated`      | a passenger books a flight   | notifications (auto flight-watch)           |
+| Event                 | Emitted when                               | Extra payload fields                                                                               |
+| --------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| `FlightStatusChanged` | any state-machine transition               | `from`, `to`                                                                                       |
+| `FlightDelayed`       | new or revised delay                       | `delayMinutes` (total), `previousDelayMinutes`, `reason`, `estimatedDeparture`, `estimatedArrival` |
+| `FlightGateChanged`   | gate assigned (`oldGate: null`) or changed | `oldGate`, `newGate`                                                                               |
+| `FlightCancelled`     | transition to `CANCELLED`                  | `reason`                                                                                           |
+| `FlightDiverted`      | transition to `DIVERTED`                   | `divertedToIata`, `reason`, `estimatedArrival`                                                     |
+| `BookingCreated`      | a passenger books a flight                 | _planned for Phase 6_                                                                              |
+
+A first delay emits `FlightStatusChanged` (to `DELAYED`) followed by `FlightDelayed`. A further delay emits only `FlightDelayed`. Delivery is at-least-once, so consumers deduplicate by `id`.
 
 Events are versioned: additive changes keep the version, while breaking changes publish a new version alongside the old one until consumers migrate.
 

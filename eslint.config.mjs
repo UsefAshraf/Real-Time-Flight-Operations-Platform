@@ -27,6 +27,8 @@ export default tseslint.config(
       ],
       '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
       'no-console': 'error',
+      // Conflicts with no-non-null-assertion (strict): we prefer an explicit `as T` over `!`.
+      '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     },
   },
   {

@@ -3,16 +3,16 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["src/**", "tsconfig*.json", "package.json"],
+      "inputs": ["src/**", "migrations/**", "data/**", "tsconfig*.json", "package.json"],
       "outputs": ["dist/**"]
     },
     "typecheck": {
       "dependsOn": ["^build"],
-      "inputs": ["src/**", "tsconfig*.json", "package.json"]
+      "inputs": ["src/**", "migrations/**", "data/**", "tsconfig*.json", "package.json"]
     },
     "test": {
       "dependsOn": ["^build"],
-      "inputs": ["src/**", "package.json"],
+      "inputs": ["src/**", "migrations/**", "data/**", "package.json"],
       "outputs": ["coverage/**"]
     },
     "dev": {

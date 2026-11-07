@@ -5,3 +5,9 @@ packages:
 # pnpm 10 blocks dependency install scripts by default; allow only what we need.
 onlyBuiltDependencies:
   - esbuild
+
+# Optional native extras of testcontainers' Docker client; not needed.
+ignoredBuiltDependencies:
+  - cpu-features
+  - protobufjs
+  - ssh2

@@ -11,3 +11,5 @@ Copy [`template.md`](template.md) to `NNNN-short-title.md` to add one.
 | [0003](0003-graphql-federation.md)               | Split the API into federated GraphQL subgraphs                | Accepted |
 | [0004](0004-hive-gateway.md)                     | Hive Gateway as the federation gateway                        | Accepted |
 | [0005](0005-redis-pubsub-subscription-fanout.md) | Redis pub/sub fan-out for subscriptions (not sticky sessions) | Accepted |
+| [0006](0006-transactional-outbox.md)             | Transactional outbox for domain events                        | Accepted |
+| [0007](0007-simulator-in-flights-context.md)     | The simulator writes through the Flights context              | Accepted |

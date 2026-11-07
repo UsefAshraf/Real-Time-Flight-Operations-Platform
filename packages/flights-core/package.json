@@ -1,0 +1,30 @@
+{
+  "name": "@flightops/flights-core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Flights bounded context: lifecycle rules and transactional commands that write domain events to the outbox.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@flightops/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests --testTimeout=60000 --hookTimeout=180000"
+  },
+  "dependencies": {
+    "@flightops/db": "workspace:*",
+    "@flightops/domain": "workspace:*",
+    "@flightops/events": "workspace:*"
+  },
+  "devDependencies": {
+    "@flightops/testing": "workspace:*"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@flightops/db",
+  "version": "0.0.0",
+  "private": true,
+  "description": "PostgreSQL pool, transactions, and the SQL migration runner + migrations.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@flightops/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "migrations"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests --testTimeout=60000 --hookTimeout=180000",
+    "migrate": "tsx --conditions=@flightops/source src/cli.ts migrate",
+    "status": "tsx --conditions=@flightops/source src/cli.ts status",
+    "reset": "tsx --conditions=@flightops/source src/cli.ts reset"
+  },
+  "dependencies": {
+    "@flightops/config": "workspace:*",
+    "@flightops/logger": "workspace:*",
+    "@types/pg": "^8.15.5",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@testcontainers/postgresql": "^11.5.1"
+  }
+}

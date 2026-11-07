@@ -1,0 +1,26 @@
+{
+  "name": "@flightops/outbox-relay",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Publishes committed outbox events from Postgres to Redis pub/sub and a Redis Stream.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch --conditions=@flightops/source src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests --testTimeout=60000 --hookTimeout=180000"
+  },
+  "dependencies": {
+    "@flightops/config": "workspace:*",
+    "@flightops/db": "workspace:*",
+    "@flightops/events": "workspace:*",
+    "@flightops/logger": "workspace:*",
+    "@flightops/service-kit": "workspace:*",
+    "ioredis": "^5.7.0"
+  },
+  "devDependencies": {
+    "@flightops/flights-core": "workspace:*",
+    "@flightops/testing": "workspace:*"
+  }
+}

@@ -1,0 +1,48 @@
+# Local development infrastructure.
+#   pnpm infra:up     start and wait until healthy
+#   pnpm infra:down   stop (data kept)
+#   pnpm infra:reset  stop and delete volumes
+#
+# Host ports are 5433 / 6380, not the defaults, so they never collide with a Postgres or Redis
+# installed directly on the machine (which would silently answer on localhost instead).
+name: flightops
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: flightops
+      POSTGRES_PASSWORD: flightops
+      POSTGRES_DB: flightops
+    command:
+      - postgres
+      - -c
+      - max_connections=200
+      - -c
+      - log_min_duration_statement=250
+    ports:
+      - '${POSTGRES_PORT:-5433}:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U flightops -d flightops']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    command: ['redis-server', '--appendonly', 'yes']
+    ports:
+      - '${REDIS_PORT:-6380}:6379'
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:
+  redisdata:

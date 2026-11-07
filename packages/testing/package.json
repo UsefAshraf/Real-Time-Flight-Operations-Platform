@@ -1,0 +1,27 @@
+{
+  "name": "@flightops/testing",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Integration-test helpers: disposable Postgres/Redis containers and data fixtures.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@flightops/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@flightops/db": "workspace:*",
+    "@testcontainers/postgresql": "^11.5.1",
+    "@testcontainers/redis": "^11.5.1"
+  }
+}
