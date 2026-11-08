@@ -2,7 +2,27 @@
 
 Flight status, gate changes, delays and passenger notifications, all in real time.
 
-The plan has 13 phases (0–12). Each phase delivers working features and ends with a clear "done when" test, so there is always something to demo. Rough total time is 12–16 weeks part-time.
+The plan has 15 phases (0–14). Each phase delivers working features and ends with a clear "done when" test, so there is always something to demo. Rough total time is 12–16 weeks part-time.
+
+## Progress
+
+| Phase | Scope                               | Status      |
+| ----- | ----------------------------------- | ----------- |
+| 0     | Foundations                         | ✅ Done     |
+| 1     | Data layer and flight simulator     | ✅ Done     |
+| 2     | Federated subgraphs                 | ⏭️ Next     |
+| 3     | Gateway, auth and schema governance | Not started |
+| 4     | N+1 elimination with DataLoader     | Not started |
+| 5     | Real-time subscriptions             | Not started |
+| 6     | Passenger notifications             | Not started |
+| 7     | Redis caching and rate limiting     | Not started |
+| 8     | PostgreSQL read replicas            | Not started |
+| 9     | Load balancing                      | Not started |
+| 10    | Frontend apps                       | Not started |
+| 11    | Observability                       | Not started |
+| 12    | Kubernetes                          | Not started |
+| 13    | Load and resilience testing         | Not started |
+| 14    | Hardening and portfolio packaging   | Not started |
 
 ---
 
